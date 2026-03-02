@@ -1,0 +1,607 @@
+{
+  "maps": {
+    "third": { "image": "map.jpg", "width": 7348, "height": 4320 },
+    "first": { "image": "beleriand.jpg", "width": 7348, "height": 4320 },
+    "second": { "image": "numenor.jpg", "width": 7348, "height": 4320 }
+  },
+  "locations": [
+    {
+      "id": "shire",
+      "name": "The Shire",
+      "image": "images/Shire_1.jpg",
+      "era": "third",
+      "year": 3018,
+      "tags": ["Hobbits", "Eriador"],
+      "lat": 3200,
+      "lng": 2655,
+      "summary": "Homeland of the Hobbits; bucolic far from the wars of the world.",
+      "lore": [
+        "Bilbo's Farewell Party marks a turning point in the Ring’s story.",
+        "Frodo leaves the Shire at the start of the Quest."
+      ]
+    },
+    {
+      "id": "bree",
+      "name": "Bree",
+      "image": "https://lotro-wiki.com/images/thumb/1/1a/Bree.jpg/600px-Bree.jpg",
+      "era": "third",
+      "year": 3019,
+      "tags": [],
+      "lat": 3156,
+      "lng": 2958,
+      "summary": "Bree is a bustling town in Eriador where Men and Hobbits live side by side, best known for The Prancing Pony inn. Sitting at a crossroads of major roads, it became a pivotal stop on Frodo’s journey and a rare pocket of ordinary life in a world sliding toward war.",
+      "lore": [
+        "Bree was one of the few places in Eriador where Men and Hobbits lived together in peace.\r\nIts position at the crossing of the East–West Road and the Greenway made it a key hub for travelers.\r\nThe Prancing Pony served as the town’s famous inn and a gathering place for news and rumor.\r\nFrodo and the Hobbits stayed in Bree while fleeing the Shire early in the War of the Ring.\r\nAragorn, known as Strider, first met Frodo at the Prancing Pony and offered guidance.\r\nThe Nazgûl searched Bree for “Baggins,” bringing fear to the town.\r\nBree became a critical waypoint on the road to Rivendell and the formation of the Fellowship.\r\nDespite the rising Shadow, Bree remained a stubbornly independent and lived-in corner of the North."
+      ]
+    },
+    {
+      "id": "fornost",
+      "name": "Fornost ",
+      "image": "images/fornost.png",
+      "era": "third",
+      "year": 3019,
+      "tags": [],
+      "lat": 3374,
+      "lng": 2883,
+      "summary": "Fornost was the ancient capital of Arnor and later the chief city of Arthedain, standing as a symbol of the Northern Kingdom’s former glory. By the late Third Age it lay in ruin, abandoned after its fall to the Witch-king of Angmar and remembered as a lost seat of Númenórean power.",
+      "lore": [
+        "Fornost was founded as a royal city of Arnor in the North-kingdom of the Dúnedain.\r\nIt later became the capital of Arthedain after Arnor was divided.\r\nThe city stood in the northern lands of Eriador near the North Downs.\r\nFornost served as the residence of Arnor’s kings and a center of Númenórean culture.\r\nThe Witch-king of Angmar waged war against the northern kingdoms for centuries.\r\nFornost eventually fell to Angmar’s forces late in the Third Age.\r\nKing Arvedui, the last king of Arthedain, fled north after its fall.\r\nThe city was abandoned and became known as Deadmen’s Dike and the Dead City.\r\nAfter Angmar’s defeat, Fornost was never fully rebuilt and remained in ruin."
+      ]
+    },
+    {
+      "id": "ann_minas",
+      "name": "Annúminas",
+      "image": "images/annuminas.png",
+      "era": "third",
+      "year": 3019,
+      "tags": [],
+      "lat": 3350,
+      "lng": 2602,
+      "summary": "Annúminas was the first capital of Arnor, founded by Elendil beside the waters of Lake Nenuial in the early years of the Second Age. Once a proud seat of Númenórean power in the North, it later fell into decline and ruin before being restored in the Fourth Age under the Reunited Kingdom.",
+      "lore": [
+        "Annúminas was founded by Elendil after the fall of Númenor.\r\nIt served as the first capital of the northern kingdom of Arnor.\r\nThe city stood beside Lake Nenuial in the region of Eriador.\r\nIt was built as a symbol of Númenórean heritage and royal authority.\r\nOver time Arnor’s population dwindled and the capital shifted to Fornost.\r\nAnnúminas gradually fell into decline and was eventually abandoned.\r\nBy the late Third Age it stood in ruins near the Evendim hills.\r\nAfter the War of the Ring, King Aragorn ordered its restoration.\r\nAnnúminas became the renewed northern capital of the Reunited Kingdom."
+      ]
+    },
+    {
+      "id": "menegroth",
+      "name": "Menegroth ",
+      "image": "images/menegroth.jpg",
+      "era": "first",
+      "year": 3019,
+      "tags": [],
+      "lat": 2815,
+      "lng": 4342,
+      "summary": "Menegroth, the famed Thousand Caves, was the hidden underground capital of Doriath and seat of King Thingol and Queen Melian. Renowned for its beauty and craftsmanship, it stood as one of the greatest Elven realms of the First Age until its tragic downfall.",
+      "lore": [
+        "Menegroth served as the royal capital of Doriath, ruled by King Thingol and Queen Melian.\r\nIt was constructed by the Dwarves of Belegost at Thingol’s request.\r\nThe halls were carved deep beneath the forests of Doriath and adorned with great artistry.\r\nMelian the Maia protected Doriath with an enchanted barrier known as the Girdle of Melian.\r\nMenegroth became a center of Elven culture, power, and wisdom in Beleriand.\r\nThe Silmaril brought by Beren and Lúthien was later housed within its halls.\r\nTensions arose between Thingol and the Dwarves over the Nauglamír and the Silmaril.\r\nThe Dwarves of Nogrod slew Thingol and plundered Menegroth’s treasures.\r\nDoriath later fell into ruin and Menegroth was abandoned after further conflict.\r\nThe Thousand Caves became a symbol of both Elven splendor and the tragedies of the First Age."
+      ]
+    },
+    {
+      "id": "gondolin",
+      "name": "Gondolin",
+      "image": "images/gondolin.png",
+      "era": "first",
+      "year": 3019,
+      "tags": [],
+      "lat": 3340,
+      "lng": 3256,
+      "summary": "Gondolin was the hidden Elven city of Turgon, concealed within the Encircling Mountains and famed for its beauty, strength, and secrecy. It stood as one of the greatest strongholds of the Elves in the First Age until its fall during one of the most tragic betrayals in Middle-earth’s history.",
+      "lore": [
+        "Gondolin was founded by Turgon, son of Fingolfin, during the First Age.\r\nThe city was hidden within a secret valley encircled by the Echoriath, the Encircling Mountains.\r\nOnly a single hidden passage, the Way of Escape, allowed access to the valley.\r\nGondolin became one of the greatest Elven kingdoms in Beleriand.\r\nIts white towers and crafted halls rivaled the beauty of Tirion in Valinor.\r\nThe city remained hidden from Morgoth for many years.\r\nTuor came to Gondolin bearing a warning from Ulmo, Lord of Waters.\r\nTurgon refused to abandon the city despite the coming danger.\r\nMaeglin betrayed Gondolin’s location to Morgoth after being captured.\r\nMorgoth’s armies attacked with Balrogs, dragons, and Orcs in a great assault.\r\nThe Fall of Gondolin became one of the greatest tragedies of the First Age.\r\nTuor and Idril led survivors through a secret escape from the city.\r\nTheir son Eärendil would later play a crucial role in the fate of Middle-earth."
+      ]
+    },
+    {
+      "id": "amon_rudh",
+      "name": "Amon Rûdh",
+      "era": "first",
+      "year": 3019,
+      "tags": [],
+      "lat": 2562,
+      "lng": 3034,
+      "summary": "Amon Rûdh was a red hill in western Beleriand that served as a refuge and stronghold during the First Age.",
+      "lore": [
+        "Amon Rûdh became a temporary outpost for Túrin and his band.\r\nIts position made it a notable, mappable landmark in Beleriand."
+      ]
+    },
+    {
+      "id": "nargothrond",
+      "name": "Nargothrond",
+      "era": "first",
+      "year": 3019,
+      "tags": [],
+      "lat": 2224,
+      "lng": 2456,
+      "summary": "Nargothrond was the great underground Elven stronghold founded by Finrod Felagund on the River Narog.",
+      "lore": [
+        "It was one of the principal Noldorin realms of the First Age.\r\nNargothrond later fell after the assault of Glaurung."
+      ]
+    },
+    {
+      "id": "dor_lomin",
+      "name": "Dor-lómin",
+      "era": "first",
+      "year": 3019,
+      "tags": [],
+      "lat": 3424,
+      "lng": 1956,
+      "summary": "Dor-lómin was the western region of Hithlum, associated with the House of Hador in the First Age.",
+      "lore": [
+        "It was the homeland of Húrin and Túrin’s people.\r\nDor-lómin was later occupied by Morgoth’s allies."
+      ]
+    },
+    {
+      "id": "vinyamar",
+      "name": "Vinyamar",
+      "era": "first",
+      "year": 3019,
+      "tags": [],
+      "lat": 2990,
+      "lng": 620,
+      "summary": "Vinyamar was Turgon’s first coastal city in Nevrast before the founding of Gondolin.",
+      "lore": [
+        "Vinyamar was raised near the sea under Ulmo’s guidance.\r\nIt remained an important site in the tales of Tuor and Gondolin."
+      ]
+    },
+    {
+      "id": "mithrim",
+      "name": "Mithrim",
+      "era": "first",
+      "year": 3019,
+      "tags": [],
+      "lat": 3658,
+      "lng": 2652,
+      "summary": "Mithrim was the northern lake-region of Hithlum where the Noldor first established camps in Beleriand.",
+      "lore": [
+        "Lake Mithrim marked one of the earliest Noldorin settlements after their return.\r\nThe region remained a major northern landmark throughout the First Age."
+      ]
+    },
+    {
+      "id": "erebor",
+      "name": "Erebor",
+      "image": "images/erebor.png",
+      "era": "third",
+      "year": 3019,
+      "tags": [],
+      "lat": 3457,
+      "lng": 4801,
+      "summary": "Erebor, known as the Lonely Mountain, is the great Dwarven kingdom of the North and one of the most renowned strongholds of Durin’s folk. Rich in treasure and craftsmanship, it became central to the events of both The Hobbit and the War of the Ring.",
+      "lore": [
+        "Erebor was founded as a great Dwarven kingdom beneath the Lonely Mountain in the Third Age.\r\nIt became a center of wealth, trade, and craftsmanship under the rule of Durin’s folk.\r\nThe kingdom prospered through alliances with nearby Dale and the Men of the North.\r\nThe dragon Smaug attacked Erebor, driving the Dwarves into exile and claiming its treasure.\r\nThorin Oakenshield later led a company to reclaim the mountain from Smaug.\r\nSmaug was slain by Bard of Dale during the events of The Hobbit.\r\nThe Battle of Five Armies was fought near Erebor shortly afterward.\r\nDáin Ironfoot became King under the Mountain and restored the kingdom’s strength.\r\nDuring the War of the Ring, Erebor resisted attacks from Sauron’s northern allies.\r\nAfter the war, Erebor remained one of the greatest Dwarven realms in Middle-earth."
+      ]
+    },
+    {
+      "id": "gundabad",
+      "name": "Gundabad ",
+      "image": "images/gundabad.png",
+      "era": "third",
+      "year": 3019,
+      "tags": [],
+      "lat": 3636,
+      "lng": 3905,
+      "summary": "Mount Gundabad is an ancient and ominous peak in the northern Misty Mountains, long associated with the Orcs and dark powers of the North. Once a sacred place to the Dwarves, it later became a stronghold of their enemies and a major center of Orcish power.",
+      "lore": [
+        "Mount Gundabad lies in the northern reaches of the Misty Mountains.\r\nIt was once considered a sacred place by the Dwarves of Durin’s folk.\r\nTradition held that Durin first awoke beneath Mount Gundabad.\r\nOver time the mountain was seized and corrupted by Orcs.\r\nIt became a major Orc stronghold during the wars of the North.\r\nArmies from Gundabad frequently threatened the Dwarves and northern kingdoms.\r\nDuring the War of the Ring, Orcs from Gundabad attacked the Lonely Mountain and Dale.\r\nThe mountain served as a rallying point for northern forces aligned with Sauron.\r\nAfter Sauron’s fall, the power of Gundabad diminished though its legacy endured.\r\nMount Gundabad remained a symbol of ancient Dwarven heritage lost to shadow."
+      ]
+    },
+    {
+      "id": "dol_guldur",
+      "name": "Dol Guldur",
+      "image": "images/dolguldur.png",
+      "era": "third",
+      "year": 3019,
+      "tags": [],
+      "lat": 2757,
+      "lng": 4354,
+      "summary": "",
+      "lore": [
+        ""
+      ]
+    },
+    {
+      "id": "carn_dum",
+      "name": "Carn Dum",
+      "image": "images/carndum.png",
+      "era": "third",
+      "year": 3019,
+      "tags": [],
+      "lat": 3721,
+      "lng": 3345,
+      "summary": "Carn Dûm was the chief fortress and capital of Angmar, the dark northern realm ruled by the Witch-king. From this stronghold, Angmar waged long war against the kingdoms of Arnor, ultimately leading to their downfall.",
+      "lore": [
+        "Carn Dûm was the principal fortress of Angmar in the far north of Eriador.\r\nIt served as the seat of the Witch-king, chief of the Nazgûl.\r\nFrom Carn Dûm, Angmar waged war against the northern kingdom of Arnor.\r\nThe realm of Angmar sought to destroy the Dúnedain and their strongholds.\r\nFor centuries, its forces weakened and divided Arnor into smaller kingdoms.\r\nThe fall of Arthedain and the capture of Fornost followed Angmar’s campaigns.\r\nKing Arvedui, last king of Arnor, was forced to flee into the northern wastes.\r\nEventually a great host from Gondor and the Elves marched north against Angmar.\r\nAngmar was defeated and the Witch-king fled, abandoning Carn Dûm.\r\nThe fortress fell into ruin and became a haunted remnant of Angmar’s power."
+      ]
+    },
+    {
+      "id": "the_iron_hills",
+      "name": "The Iron Hills",
+      "image": "images/ironhills.png",
+      "era": "third",
+      "year": 3019,
+      "tags": [],
+      "lat": 3410,
+      "lng": 5293,
+      "summary": "The Iron Hills are a rugged range east of the Lonely Mountain and home to a hardy realm of Dwarves. Ruled by Dáin Ironfoot, they became a vital source of strength and aid to Erebor and played an important role in the wars of the North.",
+      "lore": [
+        "The Iron Hills lie east of the Lonely Mountain in the northern regions of Middle-earth.\r\nThey became the stronghold of a powerful Dwarven clan descended from Durin’s folk.\r\nDáin Ironfoot ruled the Dwarves of the Iron Hills during the late Third Age.\r\nDáin and his warriors marched to Erebor during the events of The Hobbit.\r\nHe fought in the Battle of Five Armies and later became King under the Mountain.\r\nThe Iron Hills remained closely allied with Erebor and Dale.\r\nDuring the War of the Ring, forces from the East attacked the northern kingdoms.\r\nDwarves of the Iron Hills fought alongside Erebor and Dale in defense of the North.\r\nKing Dáin fell in battle before the gates of Erebor during these wars.\r\nAfter Sauron’s defeat, the Dwarves of the Iron Hills endured as a strong northern power."
+      ]
+    },
+{
+  "id": "amon_sul_weathertop",
+  "name": "Amon Sul (Weathertop)",
+  "image": "images/Amon_Sul_1.jpg",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 3186,
+  "lng": 3261,
+  "summary": "Amon Sûl, known as Weathertop, is an ancient watchtower ruin in Eriador that once served as a strategic stronghold of Arnor and Gondor. By the late Third Age it stood in ruin, yet remained a place of danger where the Ringwraiths hunted Frodo on the road to Rivendell.",
+  "lore": [
+    "Amon Sûl was once a great watchtower and fortress of the kingdom of Arnor.\r\nIt served as an important meeting place between Arnor and Gondor in earlier ages.\r\nThe tower was destroyed during wars with Angmar and fell into ruin.\r\nBy the Third Age it was known as Weathertop and stood abandoned in Eriador.\r\nAragorn led Frodo and the Hobbits to its summit while fleeing the Shire.\r\nThe Nazgûl attacked the group there during the night.\r\nFrodo was wounded by the Witch-king with a Morgul blade.\r\nThis wound began Frodo’s slow fading toward the wraith-world.\r\nAragorn drove the Ringwraiths away with fire, buying time to reach Rivendell.\r\nWeathertop remained a symbol of Arnor’s fallen strength and lingering shadow."
+  ]
+},
+{
+  "id": "grey_havens",
+  "name": "Grey Havens",
+  "image": "images/Grey_Havens_1.jpg",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 3205,
+  "lng": 2180,
+  "summary": "The Grey Havens are the westernmost port of Middle-earth and the last refuge of the Elves, from which many departed across the Sea to the Undying Lands. They symbolize both farewell and the fading of the Elder Days.",
+  "lore": [
+    "The Grey Havens were established by the Elves of Lindon in the far west of Middle-earth.\r\nThey served as the primary port from which Elves sailed to the Undying Lands.\r\nCírdan the Shipwright ruled the Havens and maintained the white ships.\r\nThroughout the Third Age many Elves departed from these shores as their time in Middle-earth ended.\r\nBilbo and Frodo Baggins both sailed from the Grey Havens at the end of the War of the Ring.\r\nGandalf and Galadriel also departed west from this port.\r\nTheir departure marked the passing of the Ring-bearers and the fading of Elven dominion.\r\nThe Havens became a symbol of transition from the Third Age into the Age of Men."
+  ]
+},
+    {
+      "id": "rivendell",
+      "name": "Rivendell (Imladris)",
+      "image": "images/Rivendell_2.jpg",
+      "era": "third",
+      "year": 3018,
+      "tags": ["Elves", "Council"],
+      "lat": 3190,
+      "lng": 3816,
+      "summary": "Rivendell, also known as Imladris, is the hidden Elven refuge founded by Elrond in the Second Age. A sanctuary of wisdom, healing, and memory, it served as a center of counsel and resistance against the Shadow throughout the history of Middle-earth.",
+      "lore": [
+        "Rivendell was founded by Elrond during the wars of the Second Age.\r\nIt was established as a hidden refuge in a deep valley of Eriador.\r\nElrond Half-elven ruled there as one of the greatest lore-masters of Middle-earth.\r\nRivendell became a sanctuary for Elves, Men, and other free peoples.\r\nMany ancient histories, songs, and records were preserved within its halls.\r\nThe shards of Narsil were kept in Rivendell until they were reforged as Andúril.\r\nFrodo recovered there after being wounded by the Nazgûl at Weathertop.\r\nThe Council of Elrond was held in Rivendell to decide the fate of the One Ring.\r\nThe Fellowship of the Ring was formed within its halls.\r\nAt the end of the Third Age, Elrond departed Middle-earth from the Grey Havens.\r\nRivendell slowly diminished as the power of the Elves faded from the world."
+      ]
+    },
+    {
+      "id": "minas_tirith",
+      "name": "Minas Tirith",
+      "image": "images/Minas_Tirith_2.jpg",
+      "era": "third",
+      "year": 3019,
+      "tags": ["Gondor", "War"],
+      "lat": 1869,
+      "lng": 4636,
+      "summary": "White City of Gondor; last great bastion against Mordor.",
+      "lore": [
+        "The Siege of Minas Tirith and the Battle of the Pelennor Fields.",
+        "The return of the King follows the war’s climax."
+      ]
+    },
+{
+  "id": "osgiliath",
+  "name": "Osgiliath",
+  "image": "images/Osgiliath_1.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 1863,
+  "lng": 4685,
+  "summary": "Once the grand capital of Gondor, Osgiliath stood astride the River Anduin as a center of power, learning, and Númenórean heritage. By the time of the War of the Ring it lay largely in ruins, a contested and strategic crossing between Minas Tirith and Mordor.",
+  "lore": [
+    "Osgiliath was founded as the original capital of Gondor by Isildur and Anárion.\r\nThe city spanned both banks of the River Anduin and served as a center of governance and trade.\r\nIt housed one of the great palantíri used by the rulers of Gondor.\r\nCivil war within Gondor led to the loss of the palantír and weakened the city.\r\nRepeated conflicts with Mordor left Osgiliath damaged and largely abandoned.\r\nBy the War of the Ring, it stood as a ruined but vital strategic crossing.\r\nGondor’s soldiers defended the city against repeated assaults from Mordor.\r\nBoromir and Faramir both fought to hold Osgiliath against Sauron’s forces.\r\nIts fall allowed Mordor’s armies to advance toward Minas Tirith.\r\nAfter the War of the Ring, Osgiliath was gradually restored under the Reunited Kingdom."
+  ]
+},
+{
+  "id": "minas_morgul",
+  "name": "Minas Morgul",
+  "image": "images/Minas_Morgul_1.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 1892,
+  "lng": 4816,
+  "summary": "Minas Morgul, once the Gondorian city of Minas Ithil, became a corrupted stronghold of the Nazgûl and the chief outpost of Sauron’s power west of Mordor. A place of dread and sorcery, it stood as a constant threat to Gondor during the War of the Ring.",
+  "lore": [
+    "Minas Morgul was originally founded as Minas Ithil, the Tower of the Moon, by the kingdom of Gondor.\r\nIt served as the eastern counterpart to Minas Anor and guarded the borders of Mordor.\r\nCaptured by the Nazgûl in the Third Age, it fell under the dominion of Sauron.\r\nThe city was corrupted and renamed Minas Morgul, becoming a place of dark sorcery and fear.\r\nIt became the chief stronghold of the Witch-king of Angmar.\r\nA pale, eerie light was said to shine constantly from the haunted city.\r\nVast armies issued from Minas Morgul at the beginning of the War of the Ring.\r\nFrodo, Sam, and Gollum passed near its gates on their journey toward Mordor.\r\nAfter the destruction of the One Ring, the city was abandoned and its evil power faded."
+  ]
+},
+    {
+  "id": "argonath",
+  "name": "Argonath",
+  "image": "images/Argonath_option3.jpg",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 2201,
+  "lng": 4359,
+  "summary": "The Pillars of the Kings",
+  "lore": [
+    "Monumental statues guarding the northern approach to Gondor along the River Anduin."
+  ]
+},
+
+{
+  "id": "khazad_dum",
+  "name": "Khazad-Dum",
+  "image": "images/Khazad_Dum_1.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 2837,
+  "lng": 3734,
+  "summary": "Khazad-dûm, later known as Moria, was the greatest of the Dwarven kingdoms beneath the Misty Mountains. Once a vast realm of wealth and craftsmanship, it fell into darkness after the awakening of an ancient terror deep within its mines.",
+  "lore": [
+    "Khazad-dûm was founded by Durin the Deathless in the First Age.\r\nIt became the greatest and richest kingdom of the Dwarves in Middle-earth.\r\nThe realm prospered through trade with nearby Elven kingdoms such as Eregion.\r\nIts halls were famed for mithril, a rare and precious metal found deep underground.\r\nAfter the fall of Eregion, Khazad-dûm endured as a stronghold of Dwarven power.\r\nIn the Third Age, the Dwarves delved too deeply in search of mithril.\r\nThey awakened a Balrog of Morgoth that had long slept beneath the mountains.\r\nThe Balrog slew King Durin VI and drove the Dwarves from their kingdom.\r\nKhazad-dûm became known thereafter as Moria, the Black Pit.\r\nOrcs and dark creatures infested the abandoned halls.\r\nThe Fellowship of the Ring later passed through Moria on their journey south.\r\nGandalf confronted and defeated the Balrog upon the Bridge of Khazad-dûm.\r\nAfter the War of the Ring, Durin’s folk eventually reclaimed parts of the ancient realm."
+  ]
+},
+   {
+  "id": "emyn_muil",
+  "name": "Emyn Muil",
+  "image": "images/Emyn_Muil_2.jpg",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 2245,
+  "lng": 4469,
+  "summary": "Broken hills east of the Anduin, treacherous and confusing to traverse.",
+  "lore": [
+    "Frodo and Sam descend after leaving the Fellowship",
+    "Gollum begins guiding them toward Mordor"
+  ]
+},
+    {
+  "id": "morannon_the_black_gate",
+  "name": "Morannon (The Black Gate)",
+  "image": "images/Morannon_1.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 2128,
+  "lng": 4855,
+  "summary": "The Black Gate of Mordor, a massive fortified entrance guarding the northern approach into Sauron’s realm and serving as the primary military gateway to the Dark Land.",
+  "lore": [
+    "The Morannon served as the main northern entrance into Mordor and was heavily fortified.\r\nConstructed to prevent invasion following Sauron’s defeat in the Second Age.\r\nGuarded by towers and vast armies under Sauron’s command.\r\nFrodo and Sam first reached the Black Gate but turned away, realizing it was impassable.\r\nAragorn later marched the Host of the West to the Morannon as a final diversion.\r\nThe Battle of the Morannon marked the last stand against Sauron’s forces.\r\nWith the destruction of the One Ring, Sauron’s armies collapsed before its gates."
+  ]
+},
+    {
+  "id": "mt_doom_orodruin",
+  "name": "Mt. Doom (Orodruin)",
+  "image": "images/Mt_Doom_1.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 1973,
+  "lng": 5014,
+  "summary": "The volcanic heart of Mordor where Sauron forged the One Ring and bound much of his power to it. Known also as Mount Doom and Amon Amarth, its fires alone could both create and destroy the Ruling Ring.",
+  "lore": [
+    "Sauron chose Orodruin as the place to forge the One Ring during the Second Age.\r\nIts fires were uniquely bound to his power and capable of shaping the Ring.\r\nThe mountain often erupted when Sauron’s strength grew or his wrath stirred.\r\nDuring the War of the Last Alliance, Orodruin fell silent after Sauron’s defeat.\r\nIn the Third Age its fires awakened again as Sauron returned to Mordor.\r\nFrodo and Sam ultimately reached its slopes to destroy the One Ring.\r\nGollum seized the Ring at the Crack of Doom but fell into the fire, unmaking it.\r\nWith the Ring’s destruction, Sauron’s power collapsed and Barad-dûr fell."
+  ]
+},
+    {
+      "id": "lothlorien",
+      "name": "Lothlórien",
+      "image": "images/Lothlorien_1.webp",
+      "era": "third",
+      "year": 3019,
+      "tags": ["Elves", "Galadriel", "Golden Wood"],
+      "lat": 2738,
+      "lng": 3987,
+      "summary": "Lothlórien is the Golden Wood of the Elves, a timeless forest realm east of the Misty Mountains preserved from decay and shadow. Once ruled by King Amroth and later by Galadriel and Celeborn, it became one of the last great Elven strongholds of the Third Age.",
+      "lore": [
+        "Lothlórien is an ancient Elven realm located east of the Misty Mountains along the River Anduin.\r\nIn earlier ages it was ruled by Amroth, a Sindarin Elf and king of the Silvan Elves.\r\nAmroth loved Nimrodel and dwelt in the forest that later bore her name.\r\nHe was lost at sea while seeking Nimrodel and never returned to Middle-earth.\r\nAfter Amroth’s passing, Galadriel and Celeborn became the rulers of Lothlórien.\r\nUnder their guidance the realm was preserved through Galadriel’s power and wisdom.\r\nThe forest became known as the Golden Wood due to the mallorn trees that grew there.\r\nTime seemed to pass differently within Lothlórien’s borders.\r\nThe Fellowship of the Ring found refuge there after fleeing Moria.\r\nGaladriel aided the Fellowship with counsel, gifts, and foresight.\r\nDuring the War of the Ring, Lothlórien resisted assaults from Dol Guldur.\r\nAfter the fall of Sauron, the power sustaining Lothlórien began to fade.\r\nGaladriel eventually departed Middle-earth, and the Golden Wood slowly diminished."
+      ]
+    },
+{
+  "id": "fangorn_forest",
+  "name": "Fangorn Forest",
+  "image": "images/fangorn.png",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 2481,
+  "lng": 3838,
+  "summary": "Fangorn Forest is one of the oldest woodlands in Middle-earth, a vast and ancient forest inhabited by the Ents and steeped in primordial memory. It stands as a remnant of the great forests that once covered much of the world and plays a decisive role in the War of the Ring.",
+  "lore": [
+    "Fangorn Forest is among the oldest surviving forests in Middle-earth.\r\nIt is named for Fangorn, known to Men as Treebeard, eldest of the Ents.\r\nThe forest lies east of the Misty Mountains and near the realm of Rohan.\r\nEnts, the shepherds of the trees, dwell deep within its ancient woods.\r\nMerry and Pippin encountered Treebeard after escaping from the Uruk-hai.\r\nThe Ents convened an Entmoot to decide their course against Saruman.\r\nFangorn’s Ents marched on Isengard and destroyed its war-making industry.\r\nSaruman was trapped within Orthanc following the Ents’ assault.\r\nFangorn remained a symbol of the natural world rising against industrial ruin."
+  ]
+},    
+{
+  "id": "isengard",
+  "name": "Isengard ",
+  "image": "images/Isengard_1.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 2293,
+  "lng": 3544,
+  "summary": "Isengard was a fortified stronghold of Gondor that later became the domain of the wizard Saruman. Once a place of watchfulness and knowledge, it was corrupted into a center of industry, war-making, and treachery during the War of the Ring.",
+  "lore": [
+    "Isengard was originally built by Gondor to guard the Gap of Rohan.\r\nIt served as a strategic fortress linking the kingdoms of Gondor and Arnor.\r\nThe tower of Orthanc stood at its center, ancient and nearly indestructible.\r\nSaruman the White was granted stewardship of Isengard during the Third Age.\r\nOver time Saruman turned Isengard into a center of industry and war production.\r\nForests were cut down and great forges were built to arm his armies.\r\nSaruman bred vast numbers of Uruk-hai to wage war against Rohan.\r\nThe Ents of Fangorn Forest marched on Isengard and destroyed its works.\r\nFloodwaters from the River Isen drowned the pits and machinery of Saruman.\r\nAfter the War of the Ring, Isengard was restored and granted to the Ents."
+  ]
+},
+{
+  "id": "orthanc",
+  "name": "Orthanc",
+  "image": "images/Orthanc_4.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 2339,
+  "lng": 3574,
+  "summary": "Orthanc is the great black tower at the heart of Isengard, an ancient structure of Númenórean craftsmanship. Nearly indestructible, it became Saruman’s stronghold and symbol of his fall from wisdom into pride and treachery.",
+  "lore": [
+    "Orthanc was built by the Númenóreans during the height of Gondor’s power.\r\nThe tower was crafted from a single mass of black stone and was nearly unbreakable.\r\nIt housed one of the seeing-stones, or palantíri, used for long-distance sight.\r\nSaruman used the palantír of Orthanc and fell under Sauron’s influence.\r\nFrom Orthanc he directed the war against Rohan and the West.\r\nAfter the Ents destroyed Isengard, Saruman was trapped within the tower.\r\nGandalf and Théoden confronted Saruman at Orthanc following the siege.\r\nSaruman was cast from the White Council and stripped of his power.\r\nOrthanc remained standing even after Isengard’s defeat due to its ancient strength."
+  ]
+},
+
+{
+  "id": "edoras",
+  "name": "Edoras",
+  "image": "images/Edoras_1.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 2048,
+  "lng": 3929,
+  "summary": "The golden hill-city of Rohan and seat of King Théoden, Edoras stands atop a green rise overlooking the plains of the Riddermark. Home to the Golden Hall of Meduseld, it serves as the political and cultural heart of the Rohirrim and a symbol of their resilience during the War of the Ring.",
+  "lore": [
+    "Edoras was built by Eorl the Young after the founding of the kingdom of Rohan.\r\nThe city sits upon a green hill in the plains of the Riddermark.\r\nMeduseld, the Golden Hall, serves as the seat of the Kings of Rohan.\r\nKing Théoden ruled from Edoras during the War of the Ring.\r\nGríma Wormtongue secretly weakened the kingdom while serving Saruman.\r\nGandalf freed Théoden from Saruman’s influence within Meduseld.\r\nThe Rohirrim rode from Edoras to aid Gondor at the Battle of Pelennor Fields.\r\nAfter the War of the Ring, Edoras remained the heart of the restored kingdom of Rohan."
+  ]
+},
+{
+  "id": "glittering_caves",
+  "name": "Glittering Caves",
+  "image": "images/Glittering_Caves_1.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 2128,
+  "lng": 3748,
+  "summary": "The Glittering Caves of Aglarond lie behind Helm’s Deep within the White Mountains and are famed for their vast chambers of crystal, stone, and light. Renowned for their natural beauty, they became a place of wonder and renewal following the War of the Ring.",
+  "lore": [
+    "The Glittering Caves of Aglarond are located behind Helm’s Deep in the White Mountains.\r\nThey are filled with vast chambers of crystal formations, stone pillars, and flowing caverns.\r\nGimli the Dwarf first beheld their beauty during the War of the Ring.\r\nHe declared them among the most beautiful caverns in Middle-earth.\r\nAfter the war, Gimli led a colony of Dwarves to dwell within the caves.\r\nThe Dwarves expanded and preserved the caverns while honoring their natural beauty.\r\nAglarond became a place of friendship between the Dwarves and the people of Rohan.\r\nLegolas later visited the caves with Gimli, deepening their bond of friendship.\r\nThe caves symbolized renewal and unity following the defeat of Sauron."
+  ]
+},
+{
+  "id": "stone_of_erech",
+  "name": "Stone of Erech",
+  "image": "images/Stone_of_Erech.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 1958,
+  "lng": 3849,
+  "summary": "The Stone of Erech is a great black monolith raised by Isildur in the early years of Gondor, marking the oath sworn by the Men of the Mountains. It later became a symbol of broken promises and the lingering curse that bound the Oathbreakers to the Dead.",
+  "lore": [
+    "The Stone of Erech was brought to Middle-earth by Isildur from Númenor.\r\nIt was set upon a hill in the White Mountains during the founding of Gondor.\r\nThe Men of the Mountains swore an oath of allegiance to Isildur upon this stone.\r\nWhen they later refused to fight against Sauron, they broke that oath.\r\nIsildur cursed them to remain as restless spirits until their oath was fulfilled.\r\nThese spirits became known as the Dead Men of Dunharrow.\r\nDuring the War of the Ring, Aragorn traveled to the Stone of Erech.\r\nThere he summoned the Oathbreakers and called them to fulfill their ancient vow.\r\nAfter aiding Aragorn in the south, the Dead were finally released from their curse.\r\nThe Stone remained a lasting symbol of oath, honor, and redemption."
+  ]
+},
+{
+  "id": "edhellond",
+  "name": "Edhellond",
+  "image": "images/Edhellond_1.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 1752,
+  "lng": 3849,
+  "summary": "Edhellond was an ancient Elven haven in southern Gondor, established by Sindarin Elves before the founding of Gondor. By the late Third Age it stood largely abandoned, remembered as a place of departure for Elves sailing west across the Sea.",
+  "lore": [
+    "Edhellond was founded by Sindarin Elves in the early years of the Second Age.\r\nIt served as an Elven harbor along the southern coasts of Middle-earth.\r\nMany Elves departed from Edhellond to sail west to the Undying Lands.\r\nThe haven lay near the later Gondorian port of Dol Amroth.\r\nAs the Third Age progressed, most of its Elven inhabitants departed.\r\nBy the War of the Ring, Edhellond was largely deserted and fallen into memory.\r\nLegends of the haven remained among the people of Gondor and Dol Amroth.\r\nIt symbolized the gradual fading of Elven presence in the southern lands."
+  ]
+},
+{
+  "id": "pelargir",
+  "name": "Pelargir",
+  "image": "images/Pelargir_1.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 1594,
+  "lng": 4505,
+  "summary": "Pelargir is one of Gondor’s greatest southern ports, a major harbor along the Anduin and a center of maritime power and trade. During the War of the Ring it became a critical strategic target, contested by both Gondor’s allies and the forces of the Corsairs.",
+  "lore": [
+    "Pelargir was one of the principal ports of Gondor, located along the Anduin in southern Gondor.\r\nFounded by the Faithful of Númenor before the Downfall, it became a key maritime stronghold.\r\nThe harbor served as a center of trade, shipbuilding, and naval defense.\r\nDuring the War of the Ring, the Corsairs of Umbar threatened Gondor from the south.\r\nAragorn traveled the Paths of the Dead and summoned the Oathbreakers to aid him.\r\nHe led their forces to Pelargir and defeated the Corsair fleet in its harbor.\r\nThe captured ships were used to sail north and relieve Gondor during the war.\r\nPelargir remained one of Gondor’s most important ports in the Reunited Kingdom."
+  ]
+},
+{
+  "id": "dol_amroth",
+  "name": "Dol Amroth",
+  "image": "images/Dol_Amroth_1.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 1635,
+  "lng": 3758,
+  "summary": "Dol Amroth is the great coastal stronghold of Belfalas and seat of Prince Imrahil, one of Gondor’s most renowned lords during the War of the Ring. Known for its seafaring heritage, chivalric knights, and ancient ties to the Elves, Dol Amroth stood as a vital bastion of strength and leadership in Gondor’s darkest hour.",
+  "lore": [
+    "Dol Amroth is a fortified coastal city in Belfalas and seat of the Princes of Dol Amroth.\r\nThe ruling line claimed ancient kinship with Elves who once dwelt in nearby Edhellond.\r\nPrince Imrahil governed Dol Amroth during the War of the Ring.\r\nImrahil led a strong force of knights and soldiers to Minas Tirith in Gondor’s defense.\r\nHe played a crucial role during the Siege of Minas Tirith and the Battle of the Pelennor Fields.\r\nPrince Imrahil fought alongside Gandalf, Aragorn, and the captains of the West.\r\nHe helped rally Gondor’s defenders when the city stood on the brink of defeat.\r\nAfter Aragorn’s return, Imrahil supported the restoration of the Reunited Kingdom.\r\nDol Amroth remained a proud and loyal stronghold under his leadership after the war."
+  ]
+},
+{
+  "id": "umbar",
+  "name": "Umbar",
+  "image": "images/umbar.png",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 750,
+  "lng": 3980,
+  "summary": "Umbar is a great southern haven and stronghold long associated with the Corsairs and the enemies of Gondor. Once a Númenórean harbor, it later became a base of maritime power that threatened Gondor’s coasts throughout the Third Age.",
+  "lore": [
+    "Umbar was originally established as a Númenórean haven in the southern regions of Middle-earth.\r\nAfter the fall of Númenor, it became a stronghold of the King’s Men who opposed the Faithful.\r\nOver time it developed into a powerful port city hostile to Gondor.\r\nThe Corsairs of Umbar launched frequent raids against Gondor’s southern coasts.\r\nUmbar’s fleets posed a constant naval threat throughout the Third Age.\r\nDuring the War of the Ring, Corsair ships sailed north to aid Sauron.\r\nAragorn captured the Corsair fleet at Pelargir with the aid of the Dead Men of Dunharrow.\r\nThis victory prevented Umbar’s forces from reinforcing Sauron’s war in Gondor.\r\nUmbar remained a symbol of maritime rivalry and Númenórean division."
+  ]
+},
+{
+  "id": "helms_deep",
+  "name": "Helms Deep ",
+  "image": "images/Helms_Deep_1.webp",
+  "era": "third",
+  "year": 3019,
+  "tags": [],
+  "lat": 2139,
+  "lng": 3769,
+  "summary": "A mighty fortress of Rohan set within a deep mountain valley, Helm’s Deep served as the last refuge of the Rohirrim during the War of the Ring and the site of one of the greatest defensive battles against Saruman’s forces.",
+  "lore": [
+    "Helm’s Deep is a fortified stronghold of Rohan built into the White Mountains.\r\nNamed for Helm Hammerhand, a legendary king of Rohan who defended it in ancient times.\r\nThe Hornburg fortress and its Deeping Wall formed one of the strongest defenses in Middle-earth.\r\nKing Théoden led the Rohirrim to Helm’s Deep to make a final stand against Saruman.\r\nSaruman’s Uruk-hai army launched a massive assault during the War of the Ring.\r\nThe Deeping Wall was breached using explosive devices devised by Saruman.\r\nAragorn, Legolas, and Gimli helped defend the fortress alongside the Rohirrim.\r\nGandalf returned with reinforcements and the forces of Erkenbrand to break the siege.\r\nThe victory at Helm’s Deep marked a turning point in the war against Saruman."
+  ]
+},
+   {
+      "id": "mordor",
+      "name": "Mordor",
+      "image": "images/Mordor_1.webp",
+      "era": "third",
+      "year": 1600,
+      "tags": ["Sauron", "Shadow"],
+      "lat": 1727,
+      "lng": 5391,
+      "summary": "Realm of Shadow; where the One Ring was forged and where it must end.",
+      "lore": [
+        "Sauron forges the One Ring in Orodruin.",
+        "The Black Land becomes the engine of war."
+      ]
+    },
+    {
+      "id": "barad_dur",
+      "name": "Barad-dûr",
+      "image": "images/Barad_Dur_1.webp",
+      "era": "third",
+      "year": 1600,
+      "tags": ["Fortress"],
+      "lat": 1981,
+      "lng": 5149,
+      "summary": "Sauron’s fortress; symbol of dominion and terror.",
+      "lore": [
+        "Raised as Sauron consolidates power in Mordor.",
+        "Falls after the Ring’s destruction."
+      ]
+    },
+    {
+      "id": "armenelos",
+      "name": "Armenelos",
+      "image": "images/armenelos.png",
+      "era": "second",
+      "year": 3019,
+      "tags": [],
+      "lat": 2227,
+      "lng": 4050,
+      "summary": "The great capital of Númenor and seat of its kings, Armenelos stood as the heart of Númenórean power, wealth, and later pride. From this magnificent city the rulers of Númenor governed the greatest kingdom of Men before its tragic downfall.",
+      "lore": [
+        "Armenelos was the capital city of Númenor and seat of its kings.\r\nIt was founded near the center of the island in the early Second Age.\r\nThe city grew into one of the greatest realms of Men in Middle-earth’s history.\r\nThe White Tree Nimloth was planted within the courts of the king.\r\nArmenelos became a center of learning, power, and maritime expansion.\r\nOver time the kings of Númenor grew proud and resentful of the Valar.\r\nSauron was brought to Númenor and rose to power within the court.\r\nHe influenced the king and led many Númenóreans toward darkness.\r\nThe great Temple of Morgoth was constructed within Armenelos.\r\nAs Númenor fell into corruption, the city became a symbol of its decline.\r\nThe Downfall of Númenor destroyed Armenelos along with the island itself."
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "id": "frodo",
+      "name": "Frodo's Journey (rough)",
+      "points": ["shire", "rivendell", "mordor", "barad_dur"],
+      "style": { "weight": 4 }
+    }
+  ]
+}

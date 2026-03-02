@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Middle-earth Atlas (Nerd Mode)</title>
+
+  <!-- Leaflet (map engine) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+    defer
+  ></script>
+
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./app.js" defer></script>
+</head>
+
+<body>
+  <div class="app">
+    <aside class="panel">
+      <header class="panel__header">
+        <div class="title">
+          <div class="title__main">Middle-earth Atlas</div>
+          <div class="title__sub">Zoom • Search • Timeline • Routes</div>
+        </div>
+      </header>
+
+      <section class="controls">
+        <label class="label" for="search">Search locations</label>
+        <input id="search" class="input" placeholder="e.g., Rivendell, Minas Tirith..." />
+
+        <div class="row">
+          <div class="col">
+            <label class="label" for="era">Era</label>
+            <select id="era" class="select">
+              <option value="all">All eras</option>
+              <option value="first">First Age</option>
+              <option value="second">Second Age</option>
+              <option value="third">Third Age</option>
+              <option value="fourth">Fourth Age</option>
+            </select>
+          </div>
+          <div class="col">
+            <label class="label" for="route">Route</label>
+            <select id="route" class="select">
+              <option value="none">None</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__top">
+            <div>
+              <div class="label">Timeline</div>
+              <div class="muted" id="timelineLabel">Showing all dates</div>
+            </div>
+            <button id="reset" class="btn" title="Reset filters and view">Reset</button>
+          </div>
+
+          <input id="year" type="range" min="0" max="1" step="1" value="1" />
+          <div class="timeline__legend">
+            <span id="minYear"></span>
+            <span id="maxYear"></span>
+          </div>
+
+          <div class="hint muted">
+            Tip: set year to filter “events up to this point”.
+          </div>
+        </div>
+      </section>
+
+      <section class="details" id="details">
+        <div class="details__empty">
+          Click a marker to see lore.
+        </div>
+      </section>
+
+      <footer class="panel__footer muted">
+        Local-only nerd project • Leaflet image overlay
+      </footer>
+    </aside>
+
+    <main class="mapWrap">
+      <div style="position:absolute; top:10px; left:10px; z-index:999;">
+        <select id="ageSelector">
+          <option value="third">Third Age</option>
+          <option value="first">First Age (Beleriand)</option>
+          <option value="second">Second Age (Númenor)</option>
+        </select>
+      </div>
+      <div id="map"></div>
+    </main>
+  </div>
+</body>
+</html>
