@@ -5,21 +5,24 @@
     "second": { "image": "numenor.jpg", "width": 7348, "height": 4320 }
   },
   "locations": [
-    {
-      "id": "shire",
-      "name": "The Shire",
-      "image": "images/Shire_1.jpg",
-      "era": "third",
-      "year": 3018,
-      "tags": ["Hobbits", "Eriador"],
-      "lat": 3200,
-      "lng": 2655,
-      "summary": "Homeland of the Hobbits; bucolic far from the wars of the world.",
-      "lore": [
-        "Bilbo's Farewell Party marks a turning point in the Ring’s story.",
-        "Frodo leaves the Shire at the start of the Quest."
-      ]
-    },
+{
+  "id": "shire",
+  "name": "The Shire",
+  "image": "images/shire.jpg",
+  "era": "third",
+  "year": 3018,
+  "tags": ["Hobbits", "Eriador"],
+  "lat": 3200,
+  "lng": 2655,
+  "summary": "A quiet, ordered land in northwestern Eriador and homeland of the Hobbits, the Shire stood apart from the great wars of Middle-earth — until the War of the Ring reached even its borders.",
+  "lore": [
+    "Founded in T.A. 1601 when Hobbits were granted the land by King Argeleb II of Arthedain, the Shire became a self-governing and remarkably peaceful realm.",
+    "Divided into the Four Farthings, it was known for its tilled fields, pipe-weed, inns, and an ordered rural life far removed from the struggles of Men and Elves.",
+    "Bilbo Baggins' Farewell Party in 3001 marked the beginning of the final chapter of the One Ring’s history in Middle-earth.",
+    "In 3018, Frodo Baggins departed from Bag End, carrying the Ring into exile and setting in motion the events of the War of the Ring.",
+    "Though distant from Mordor, the Shire would later suffer the Scouring — a reminder that no land, however sheltered, stood entirely beyond the Shadow."
+  ]
+},
     {
       "id": "bree",
       "name": "Bree",
