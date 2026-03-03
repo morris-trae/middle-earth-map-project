@@ -233,7 +233,9 @@ function makeMarker(loc) {
   });
 
   marker.bindPopup(
-    `<strong>${escapeHtml(loc.name)}</strong><br>${escapeHtml(loc.summary || "")}`
+    `${loc.image ? `<img src="${escapeHtml(loc.image)}" style="width:100%;max-height:140px;object-fit:cover;border-radius:6px;display:block;margin-bottom:6px;">` : ""}` +
+    `<strong>${escapeHtml(loc.name)}</strong><br>${escapeHtml(loc.summary || "")}`,
+    { maxWidth: 260 }
   );
 
   marker.on("click", () => {
