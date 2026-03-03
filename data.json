@@ -8,7 +8,8 @@
 {
   "id": "shire",
   "name": "The Shire",
-  "image": "images/shire.jpg",
+  "image": "images/shire.jpg"
+",
   "era": "third",
   "year": 3018,
   "tags": ["Hobbits", "Eriador"],
