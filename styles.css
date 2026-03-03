@@ -127,6 +127,17 @@ html, body { height: 100%; margin: 0; font-family: ui-sans-serif, system-ui, -ap
   z-index: 700 !important;
 }
 
+.age-selector-wrap {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+}
+
+.menu-toggle {
+  display: none; /* shown only on mobile via @media */
+}
+
 .location-img {
   width: 100%;
   border-radius: 10px;
@@ -143,5 +154,75 @@ html, body { height: 100%; margin: 0; font-family: ui-sans-serif, system-ui, -ap
 .lore {
   padding-left: 18px;
   line-height: 1.5em;
+}
+
+/* ===========================
+   Mobile (max-width: 768px)
+=========================== */
+@media (max-width: 768px) {
+  .app {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .panel {
+    width: 0;
+    min-width: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: width 0.25s ease;
+    border-right: none;
+  }
+
+  .app.panel--open .panel {
+    width: 300px;
+    border-right: 1px solid var(--border);
+  }
+
+  .mapWrap {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .age-selector-wrap {
+    left: auto;
+    right: 10px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: rgba(11, 15, 20, 0.85);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 18px;
+    backdrop-filter: blur(4px);
+  }
+
+  .menu-toggle:hover {
+    border-color: rgba(125, 211, 252, 0.45);
+    box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.12);
+  }
+
+  .btn,
+  .select,
+  .input {
+    min-height: 44px;
+  }
+
+  input[type="range"] {
+    height: 32px;
+    cursor: pointer;
+  }
 }
 

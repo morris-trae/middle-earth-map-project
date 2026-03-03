@@ -43,6 +43,17 @@ function slugifyId(name) {
     .replace(/^_+|_+$/g, "");
 }
 
+function closePanelOnMobile() {
+  if (window.innerWidth > 768) return;
+  const appEl = document.querySelector(".app");
+  const toggle = document.getElementById("menuToggle");
+  if (appEl) appEl.classList.remove("panel--open");
+  if (toggle) {
+    toggle.innerHTML = "&#9776;";
+    toggle.setAttribute("aria-expanded", "false");
+  }
+}
+
 function getActiveMapMeta() {
   const defaultsByAge = {
     third: { image: "map.jpg", width: 7348, height: 4320 },
@@ -176,6 +187,7 @@ function initMap() {
   map.on("click", (e) => {
     if (e.originalEvent.shiftKey) return;
     console.log("lat:", Math.round(e.latlng.lat), "lng:", Math.round(e.latlng.lng));
+    closePanelOnMobile();
   });
 }
 
@@ -322,6 +334,7 @@ function initRouteSelector() {
    Sidebar renderer (with image)
 ----------------------------- */
 function renderDetails(loc) {
+  closePanelOnMobile();
   const detailsEl = getDetailsEl();
   if (!detailsEl) return;
 
@@ -350,6 +363,17 @@ function renderDetails(loc) {
    UI wiring
 ----------------------------- */
 function bindUI() {
+  const menuToggle = document.getElementById("menuToggle");
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      const appEl = document.querySelector(".app");
+      if (!appEl) return;
+      const isOpen = appEl.classList.toggle("panel--open");
+      menuToggle.innerHTML = isOpen ? "&#10005;" : "&#9776;";
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
+
   const searchEl = document.getElementById("search");
   if (searchEl) {
     searchEl.addEventListener("input", () => {
