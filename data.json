@@ -898,19 +898,57 @@
       ]
     }
   ],
-  "routes": [
+  "journeys": [
     {
-      "id": "frodo",
-      "name": "Frodo's Journey (rough)",
+      "id": "frodo_sam",
+      "name": "Frodo & Sam",
+      "color": "#5b8dd9",
       "points": [
-        "shire",
-        "rivendell",
-        "mordor",
-        "barad_dur"
-      ],
-      "style": {
-        "weight": 4
-      }
+        "shire", "bree", "amon_sul_weathertop", "rivendell",
+        "khazad_dum", "lothlorien", "emyn_muil",
+        "morannon_the_black_gate", "mordor", "mt_doom_orodruin"
+      ]
+    },
+    {
+      "id": "aragorn",
+      "name": "Aragorn",
+      "color": "#3cb371",
+      "points": [
+        "shire", "bree", "amon_sul_weathertop", "rivendell",
+        "khazad_dum", "lothlorien", "emyn_muil",
+        "edoras", "helms_deep", "isengard",
+        "stone_of_erech", "pelargir", "minas_tirith"
+      ]
+    },
+    {
+      "id": "gandalf",
+      "name": "Gandalf",
+      "color": "#c0c0c0",
+      "points": [
+        "shire", "bree", "rivendell", "khazad_dum",
+        "edoras", "helms_deep", "minas_tirith",
+        "morannon_the_black_gate"
+      ]
+    },
+    {
+      "id": "legolas_gimli",
+      "name": "Legolas & Gimli",
+      "color": "#daa520",
+      "points": [
+        "rivendell", "khazad_dum", "lothlorien", "emyn_muil",
+        "fangorn_forest", "isengard", "edoras", "helms_deep",
+        "stone_of_erech", "pelargir", "minas_tirith"
+      ]
+    },
+    {
+      "id": "merry_pippin",
+      "name": "Merry & Pippin",
+      "color": "#e07820",
+      "points": [
+        "shire", "bree", "rivendell", "khazad_dum",
+        "lothlorien", "emyn_muil", "fangorn_forest",
+        "isengard", "edoras", "helms_deep", "minas_tirith"
+      ]
     }
   ]
 }
