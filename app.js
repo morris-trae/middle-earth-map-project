@@ -440,6 +440,7 @@ function bindUI() {
       currentAge = event.target.value;
       loadMapOverlay();
       renderMarkers();
+      renderJourneys();
     });
   }
 }
