@@ -29,7 +29,7 @@
       <header class="panel__header">
         <div class="title">
           <div class="title__main">Middle-earth Atlas</div>
-          <div class="title__sub">Zoom • Search • Timeline • Journeys</div>
+          <div class="title__sub">Zoom • Search • Journeys</div>
         </div>
       </header>
 
@@ -47,24 +47,8 @@
         </select>
         <div id="journeys-container"></div>
 
-        <div class="timeline">
-          <div class="timeline__top">
-            <div>
-              <div class="label">Timeline</div>
-              <div class="muted" id="timelineLabel">Showing all dates</div>
-            </div>
-            <button id="reset" class="btn" title="Reset filters and view">Reset</button>
-          </div>
-
-          <input id="year" type="range" min="0" max="1" step="1" value="1" />
-          <div class="timeline__legend">
-            <span id="minYear"></span>
-            <span id="maxYear"></span>
-          </div>
-
-          <div class="hint muted">
-            Tip: set year to filter “events up to this point”.
-          </div>
+        <div class=”controls__footer”>
+          <button id=”reset” class=”btn” title=”Reset filters and view”>Reset</button>
         </div>
       </section>
 

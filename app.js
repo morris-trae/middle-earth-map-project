@@ -17,7 +17,6 @@ let currentAge = "third"; // "third" | "first"
 const state = {
   query: "",
   era: "all",     // "all" | "first" | "second" | "third" (you can extend)
-  year: 999999,   // timeline cutoff
   activeJourneys: new Set(),
   selectedLocationId: null
 };
@@ -74,13 +73,6 @@ function getActiveMapMeta() {
 
 function getDetailsEl() {
   return document.getElementById("details");
-}
-
-function getSelectedYear() {
-  const el = document.getElementById("year");
-  if (!el) return state.year;
-  const v = Number(el.value);
-  return Number.isFinite(v) ? v : state.year;
 }
 
 /* ----------------------------
@@ -211,13 +203,6 @@ function matchesFilters(loc) {
     if ((loc.era || "").toLowerCase() !== state.era) return false;
   }
 
-  // Year cutoff (<= selected)
-  const y = Number(loc.year);
-  const cutoff = Number(getSelectedYear());
-  if (Number.isFinite(y) && Number.isFinite(cutoff)) {
-    if (y > cutoff) return false;
-  }
-
   return true;
 }
 
@@ -279,30 +264,6 @@ function renderJourneys() {
       opacity: 0.85
     }).addTo(routesLayer);
   }
-}
-
-function initTimeline() {
-  const yearEl = document.getElementById("year");
-  if (!yearEl) return;
-
-  const years = (DATA.locations || [])
-    .map((loc) => Number(loc.year))
-    .filter((y) => Number.isFinite(y));
-  const min = years.length ? Math.min(...years) : 0;
-  const max = years.length ? Math.max(...years) : 1;
-
-  yearEl.min = String(min);
-  yearEl.max = String(max);
-  yearEl.step = "1";
-  yearEl.value = String(max);
-  state.year = max;
-
-  const minEl = document.getElementById("minYear");
-  const maxEl = document.getElementById("maxYear");
-  const labelEl = document.getElementById("timelineLabel");
-  if (minEl) minEl.textContent = String(min);
-  if (maxEl) maxEl.textContent = String(max);
-  if (labelEl) labelEl.textContent = `Showing up to year ${max}`;
 }
 
 function initJourneys() {
@@ -406,16 +367,6 @@ function bindUI() {
     });
   }
 
-  const yearEl = document.getElementById("year");
-  if (yearEl) {
-    yearEl.addEventListener("input", () => {
-      state.year = Number(yearEl.value) || state.year;
-      const labelEl = document.getElementById("timelineLabel");
-      if (labelEl) labelEl.textContent = `Showing up to year ${getSelectedYear()}`;
-      renderMarkers();
-    });
-  }
-
   const resetEl = document.getElementById("reset");
   if (resetEl) {
     resetEl.addEventListener("click", () => {
@@ -452,7 +403,6 @@ async function main() {
   try {
     DATA = await loadData();
     initMap();
-    initTimeline();
     initJourneys();
     bindUI();
     renderMarkers();
