@@ -335,12 +335,12 @@ function initJourneys() {
     dot.className = "journey-dot";
     dot.style.background = journey.color || "#888";
 
-    const name = document.createElement("span");
-    name.textContent = journey.name;
+    const nameEl = document.createElement("span");
+    nameEl.textContent = journey.name;
 
     row.appendChild(checkbox);
     row.appendChild(dot);
-    row.appendChild(name);
+    row.appendChild(nameEl);
     container.appendChild(row);
   }
 }
