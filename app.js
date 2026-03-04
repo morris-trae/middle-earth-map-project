@@ -305,6 +305,46 @@ function initTimeline() {
   if (labelEl) labelEl.textContent = `Showing up to year ${max}`;
 }
 
+function initJourneys() {
+  const container = document.getElementById("journeys-container");
+  if (!container || !(DATA.journeys || []).length) return;
+
+  const label = document.createElement("div");
+  label.className = "label";
+  label.textContent = "Journeys";
+  container.appendChild(label);
+
+  for (const journey of DATA.journeys) {
+    const row = document.createElement("label");
+    row.className = "journey-row";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.className = "journey-checkbox";
+    checkbox.dataset.journeyId = journey.id;
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        state.activeJourneys.add(journey.id);
+      } else {
+        state.activeJourneys.delete(journey.id);
+      }
+      renderJourneys();
+    });
+
+    const dot = document.createElement("span");
+    dot.className = "journey-dot";
+    dot.style.background = journey.color || "#888";
+
+    const name = document.createElement("span");
+    name.textContent = journey.name;
+
+    row.appendChild(checkbox);
+    row.appendChild(dot);
+    row.appendChild(name);
+    container.appendChild(row);
+  }
+}
+
 
 /* ----------------------------
    Sidebar renderer (with image)
@@ -407,6 +447,7 @@ async function main() {
     DATA = await loadData();
     initMap();
     initTimeline();
+    initJourneys();
     bindUI();
     renderMarkers();
     renderJourneys();
