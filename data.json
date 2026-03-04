@@ -547,6 +547,26 @@
       ]
     },
     {
+      "id": "ithilien",
+      "name": "Ithilien",
+      "era": "third",
+      "year": 3019,
+      "tags": [],
+      "lat": 2020,
+      "lng": 4728,
+      "summary": "Ithilien was the fair eastern province of Gondor lying between the River Anduin and the western mountains of Mordor. Once a land of beauty and hidden gardens, it became a contested wilderness during the War of the Ring, patrolled in secret by Faramir's Rangers.",
+      "lore": [
+        "Ithilien was the easternmost province of Gondor, stretching between the Anduin and the Ephel D\u00faath.",
+        "Despite the shadow of Mordor, it remained a land of remarkable natural beauty.",
+        "Faramir led a company of Rangers who operated in secret from hidden refuges within Ithilien.",
+        "Frodo, Sam, and Gollum passed through Ithilien after turning away from the Black Gate.",
+        "They were captured by Faramir's Rangers and brought to the hidden refuge of Henneth Ann\u00fbn.",
+        "Faramir questioned Frodo about the One Ring before releasing him to continue his quest.",
+        "The Rangers struck against Haradrim forces moving through Ithilien toward Mordor.",
+        "After the War of the Ring, Faramir was made Prince of Ithilien and worked to restore its beauty."
+      ]
+    },
+    {
       "id": "mt_doom_orodruin",
       "name": "Mt. Doom (Orodruin)",
       "image": "images/Mt_Doom_1.webp",
@@ -946,6 +966,7 @@
         "argonath",
         "emyn_muil",
         "morannon_the_black_gate",
+        "ithilien",
         "minas_morgul",
         "morgai",
         "isenmouthe",
