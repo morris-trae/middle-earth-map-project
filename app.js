@@ -423,7 +423,12 @@ function bindUI() {
       state.era = "all";
       if (searchEl) searchEl.value = "";
       if (eraEl) eraEl.value = "all";
+      state.activeJourneys.clear();
+      document.querySelectorAll(".journey-checkbox").forEach(cb => {
+        cb.checked = false;
+      });
       renderMarkers();
+      renderJourneys();
     });
   }
 
