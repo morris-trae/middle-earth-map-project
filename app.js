@@ -243,6 +243,24 @@ function renderMarkers() {
   }
 }
 
+function catmullRomSpline(points, segments) {
+  if (points.length < 2) return points;
+  const pts = [points[0], ...points, points[points.length - 1]];
+  const result = [];
+  for (let i = 0; i < pts.length - 3; i++) {
+    const [p0, p1, p2, p3] = [pts[i], pts[i+1], pts[i+2], pts[i+3]];
+    for (let j = 0; j < segments; j++) {
+      const t = j / segments, t2 = t * t, t3 = t2 * t;
+      result.push([
+        0.5 * ((2*p1[0]) + (-p0[0]+p2[0])*t + (2*p0[0]-5*p1[0]+4*p2[0]-p3[0])*t2 + (-p0[0]+3*p1[0]-3*p2[0]+p3[0])*t3),
+        0.5 * ((2*p1[1]) + (-p0[1]+p2[1])*t + (2*p0[1]-5*p1[1]+4*p2[1]-p3[1])*t2 + (-p0[1]+3*p1[1]-3*p2[1]+p3[1])*t3)
+      ]);
+    }
+  }
+  result.push(points[points.length - 1]);
+  return result;
+}
+
 function renderJourneys() {
   if (!routesLayer) return;
   routesLayer.clearLayers();
@@ -258,10 +276,11 @@ function renderJourneys() {
 
     if (latLngs.length < 2) continue;
 
-    L.polyline(latLngs, {
+    L.polyline(catmullRomSpline(latLngs, 20), {
       color: journey.color || "#e4572e",
       weight: 4,
-      opacity: 0.85
+      opacity: 0.85,
+      dashArray: "10, 8"
     }).addTo(routesLayer);
   }
 }
