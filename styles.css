@@ -157,6 +157,46 @@ html, body { height: 100%; margin: 0; font-family: ui-sans-serif, system-ui, -ap
 }
 
 /* ===========================
+   Journeys
+=========================== */
+#journeys-container {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+
+.journey-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text);
+  user-select: none;
+}
+
+.journey-row:hover {
+  color: var(--accent);
+}
+
+.journey-checkbox {
+  accent-color: var(--accent);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.journey-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ===========================
    Mobile (max-width: 768px)
 =========================== */
 @media (max-width: 768px) {
