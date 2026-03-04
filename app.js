@@ -18,7 +18,6 @@ const state = {
   query: "",
   era: "all",     // "all" | "first" | "second" | "third" (you can extend)
   year: 999999,   // timeline cutoff
-  route: "none",
   selectedLocationId: null
 };
 
@@ -258,39 +257,7 @@ function renderMarkers() {
   }
 }
 
-function buildRouteLatLng(route) {
-  const points = Array.isArray(route.points) ? route.points : [];
-  const latLngs = [];
 
-  for (const pointId of points) {
-    const loc = (DATA.locations || []).find((item) => item.id === pointId);
-    if (!loc) continue;
-    if (!matchesFilters(loc)) continue;
-    latLngs.push([loc.lat, loc.lng]);
-  }
-
-  return latLngs;
-}
-
-function renderRoutes() {
-  if (!routesLayer) return;
-  routesLayer.clearLayers();
-
-  if (state.route === "none") return;
-
-  const route = (DATA.routes || []).find((r) => r.id === state.route);
-  if (!route) return;
-
-  const latLngs = buildRouteLatLng(route);
-  if (latLngs.length < 2) return;
-
-  const style = route.style || {};
-  L.polyline(latLngs, {
-    color: style.color || "#e4572e",
-    weight: Number(style.weight) || 4,
-    opacity: Number(style.opacity) || 0.9
-  }).addTo(routesLayer);
-}
 
 function initTimeline() {
   const yearEl = document.getElementById("year");
@@ -316,21 +283,6 @@ function initTimeline() {
   if (labelEl) labelEl.textContent = `Showing up to year ${max}`;
 }
 
-function initRouteSelector() {
-  const routeEl = document.getElementById("route");
-  if (!routeEl) return;
-
-  routeEl.innerHTML = `<option value="none">None</option>`;
-
-  for (const route of DATA.routes || []) {
-    const option = document.createElement("option");
-    option.value = route.id;
-    option.textContent = route.name || route.id;
-    routeEl.appendChild(option);
-  }
-
-  routeEl.value = state.route;
-}
 
 /* ----------------------------
    Sidebar renderer (with image)
@@ -381,7 +333,6 @@ function bindUI() {
     searchEl.addEventListener("input", () => {
       state.query = searchEl.value || "";
       renderMarkers();
-      renderRoutes();
     });
   }
 
@@ -390,7 +341,6 @@ function bindUI() {
     eraEl.addEventListener("change", () => {
       state.era = eraEl.value || "all";
       renderMarkers();
-      renderRoutes();
     });
   }
 
@@ -401,15 +351,6 @@ function bindUI() {
       const labelEl = document.getElementById("timelineLabel");
       if (labelEl) labelEl.textContent = `Showing up to year ${getSelectedYear()}`;
       renderMarkers();
-      renderRoutes();
-    });
-  }
-
-  const routeEl = document.getElementById("route");
-  if (routeEl) {
-    routeEl.addEventListener("change", () => {
-      state.route = routeEl.value || "none";
-      renderRoutes();
     });
   }
 
@@ -418,12 +359,9 @@ function bindUI() {
     resetEl.addEventListener("click", () => {
       state.query = "";
       state.era = "all";
-      state.route = "none";
       if (searchEl) searchEl.value = "";
       if (eraEl) eraEl.value = "all";
-      if (routeEl) routeEl.value = "none";
       renderMarkers();
-      renderRoutes();
     });
   }
 
@@ -435,7 +373,6 @@ function bindUI() {
       currentAge = event.target.value;
       loadMapOverlay();
       renderMarkers();
-      renderRoutes();
     });
   }
 }
@@ -448,10 +385,8 @@ async function main() {
     DATA = await loadData();
     initMap();
     initTimeline();
-    initRouteSelector();
     bindUI();
     renderMarkers();
-    renderRoutes();
 
     const detailsEl = getDetailsEl();
     if (detailsEl) {
