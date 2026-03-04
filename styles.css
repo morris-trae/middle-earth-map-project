@@ -180,6 +180,10 @@ html, body { height: 100%; margin: 0; font-family: ui-sans-serif, system-ui, -ap
   color: var(--accent);
 }
 
+.journey-row:has(input:checked) {
+  color: var(--accent);
+}
+
 .journey-checkbox {
   accent-color: var(--accent);
   width: 15px;
@@ -263,6 +267,10 @@ html, body { height: 100%; margin: 0; font-family: ui-sans-serif, system-ui, -ap
   input[type="range"] {
     height: 32px;
     cursor: pointer;
+  }
+
+  .journey-row {
+    padding: 12px 0;
   }
 }
 
