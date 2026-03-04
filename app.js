@@ -18,6 +18,7 @@ const state = {
   query: "",
   era: "all",     // "all" | "first" | "second" | "third" (you can extend)
   year: 999999,   // timeline cutoff
+  activeJourneys: new Set(),
   selectedLocationId: null
 };
 
@@ -257,7 +258,28 @@ function renderMarkers() {
   }
 }
 
+function renderJourneys() {
+  if (!routesLayer) return;
+  routesLayer.clearLayers();
 
+  for (const journey of DATA.journeys || []) {
+    if (!state.activeJourneys.has(journey.id)) continue;
+
+    const latLngs = [];
+    for (const pointId of journey.points || []) {
+      const loc = (DATA.locations || []).find(l => l.id === pointId);
+      if (loc) latLngs.push([loc.lat, loc.lng]);
+    }
+
+    if (latLngs.length < 2) continue;
+
+    L.polyline(latLngs, {
+      color: journey.color || "#e4572e",
+      weight: 4,
+      opacity: 0.85
+    }).addTo(routesLayer);
+  }
+}
 
 function initTimeline() {
   const yearEl = document.getElementById("year");
@@ -387,6 +409,7 @@ async function main() {
     initTimeline();
     bindUI();
     renderMarkers();
+    renderJourneys();
 
     const detailsEl = getDetailsEl();
     if (detailsEl) {
