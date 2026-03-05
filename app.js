@@ -262,48 +262,70 @@ function catmullRomSpline(points, segments) {
   return result;
 }
 
+function cancelJourneyAnim(polyline) {
+  polyline._cancelled = true;
+  if (polyline._animTimeout) clearTimeout(polyline._animTimeout);
+  const el = polyline.getElement ? polyline.getElement() : null;
+  if (el) el.style.transition = "none";
+}
+
 function animateJourney(journey, latLngs) {
   // Cancel any existing animation for this journey
   const existing = journeyPolylines.get(journey.id);
   if (existing) {
-    existing._cancelled = true;
+    cancelJourneyAnim(existing);
     routesLayer.removeLayer(existing);
     journeyPolylines.delete(journey.id);
   }
 
   if (latLngs.length < 2) return;
 
-  const polyline = L.polyline([latLngs[0], latLngs[1]], {
+  // Draw the full path immediately — CSS will animate the reveal
+  const polyline = L.polyline(latLngs, {
     color: journey.color || "#e4572e",
     weight: 4,
-    opacity: 0.85,
-    dashArray: "10, 8"
+    opacity: 0.85
   }).addTo(routesLayer);
 
   journeyPolylines.set(journey.id, polyline);
 
-  let index = 2;
-  const STEP = 5; // points revealed per animation frame
+  const DURATION = 1400; // ms
 
-  function tick() {
+  // One RAF ensures Leaflet has rendered the SVG <path> element
+  requestAnimationFrame(() => {
     if (polyline._cancelled) return;
-    if (index >= latLngs.length) return;
-    const end = Math.min(index + STEP, latLngs.length);
-    for (let i = index; i < end; i++) {
-      polyline.addLatLng(latLngs[i]);
-    }
-    index = end;
-    if (index < latLngs.length) requestAnimationFrame(tick);
-  }
+    const el = polyline.getElement();
+    if (!el) return;
 
-  requestAnimationFrame(tick);
+    const len = el.getTotalLength();
+
+    // Set up: one giant dash hides the entire path via offset
+    el.style.strokeDasharray = len + " " + len;
+    el.style.strokeDashoffset = String(len);
+    el.style.transition = "none";
+
+    // Force layout so the initial hidden state is committed before animating
+    void el.getBoundingClientRect();
+
+    // Animate offset to 0 → path draws itself from start to end
+    el.style.transition = `stroke-dashoffset ${DURATION}ms ease-in-out`;
+    el.style.strokeDashoffset = "0";
+
+    // After draw completes, switch to dashed style
+    polyline._animTimeout = setTimeout(() => {
+      if (polyline._cancelled) return;
+      el.style.transition = "none";
+      el.style.strokeDasharray = "10 8";
+      el.style.strokeDashoffset = "";
+    }, DURATION + 50);
+  });
 }
 
 function renderJourneys() {
   if (!routesLayer) return;
 
   // Cancel any in-progress animations and clear
-  journeyPolylines.forEach(p => { p._cancelled = true; });
+  journeyPolylines.forEach(p => cancelJourneyAnim(p));
   journeyPolylines.clear();
   routesLayer.clearLayers();
 
@@ -359,7 +381,7 @@ function initJourneys() {
         state.activeJourneys.delete(journey.id);
         const existing = journeyPolylines.get(journey.id);
         if (existing) {
-          existing._cancelled = true;
+          cancelJourneyAnim(existing);
           routesLayer.removeLayer(existing);
           journeyPolylines.delete(journey.id);
         }
