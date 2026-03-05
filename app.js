@@ -447,6 +447,28 @@ function bindUI() {
     });
   }
 
+  // Handle orientation change: auto-close panel when rotating to landscape
+  let lastResizeWidth = window.innerWidth;
+  window.addEventListener('resize', () => {
+    const newWidth = window.innerWidth;
+
+    // Portrait (≤768px) → landscape (>768px): hamburger disappears, force-close panel
+    if (newWidth > 768 && lastResizeWidth <= 768) {
+      const appEl = document.querySelector('.app');
+      const toggle = document.getElementById('menuToggle');
+      if (appEl) appEl.classList.remove('panel--open');
+      if (toggle) {
+        toggle.innerHTML = '&#9776;';
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    lastResizeWidth = newWidth;
+
+    // Always invalidate Leaflet size so the map fills its container after resize
+    if (map) map.invalidateSize();
+  });
+
   const searchEl = document.getElementById("search");
   if (searchEl) {
     searchEl.addEventListener("input", () => {
