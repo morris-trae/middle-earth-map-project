@@ -11,6 +11,7 @@ let map = null;
 let imageOverlay = null;
 let markersLayer = null;
 let routesLayer = null;
+const journeyPolylines = new Map(); // journey.id → L.polyline
 
 let currentAge = "third"; // "third" | "first"
 
@@ -261,8 +262,49 @@ function catmullRomSpline(points, segments) {
   return result;
 }
 
+function animateJourney(journey, latLngs) {
+  // Cancel any existing animation for this journey
+  const existing = journeyPolylines.get(journey.id);
+  if (existing) {
+    existing._cancelled = true;
+    routesLayer.removeLayer(existing);
+    journeyPolylines.delete(journey.id);
+  }
+
+  if (latLngs.length < 2) return;
+
+  const polyline = L.polyline([latLngs[0], latLngs[1]], {
+    color: journey.color || "#e4572e",
+    weight: 4,
+    opacity: 0.85,
+    dashArray: "10, 8"
+  }).addTo(routesLayer);
+
+  journeyPolylines.set(journey.id, polyline);
+
+  let index = 2;
+  const STEP = 5; // points revealed per animation frame
+
+  function tick() {
+    if (polyline._cancelled) return;
+    if (index >= latLngs.length) return;
+    const end = Math.min(index + STEP, latLngs.length);
+    for (let i = index; i < end; i++) {
+      polyline.addLatLng(latLngs[i]);
+    }
+    index = end;
+    if (index < latLngs.length) requestAnimationFrame(tick);
+  }
+
+  requestAnimationFrame(tick);
+}
+
 function renderJourneys() {
   if (!routesLayer) return;
+
+  // Cancel any in-progress animations and clear
+  journeyPolylines.forEach(p => { p._cancelled = true; });
+  journeyPolylines.clear();
   routesLayer.clearLayers();
 
   for (const journey of DATA.journeys || []) {
@@ -276,12 +318,14 @@ function renderJourneys() {
 
     if (latLngs.length < 2) continue;
 
-    L.polyline(catmullRomSpline(latLngs, 20), {
+    const polyline = L.polyline(catmullRomSpline(latLngs, 20), {
       color: journey.color || "#e4572e",
       weight: 4,
       opacity: 0.85,
       dashArray: "10, 8"
     }).addTo(routesLayer);
+
+    journeyPolylines.set(journey.id, polyline);
   }
 }
 
@@ -305,10 +349,21 @@ function initJourneys() {
     checkbox.addEventListener("change", () => {
       if (checkbox.checked) {
         state.activeJourneys.add(journey.id);
+        const latLngs = [];
+        for (const pointId of journey.points || []) {
+          const loc = (DATA.locations || []).find(l => l.id === pointId);
+          if (loc) latLngs.push([loc.lat, loc.lng]);
+        }
+        animateJourney(journey, catmullRomSpline(latLngs, 20));
       } else {
         state.activeJourneys.delete(journey.id);
+        const existing = journeyPolylines.get(journey.id);
+        if (existing) {
+          existing._cancelled = true;
+          routesLayer.removeLayer(existing);
+          journeyPolylines.delete(journey.id);
+        }
       }
-      renderJourneys();
     });
 
     const dot = document.createElement("span");
