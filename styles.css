@@ -195,9 +195,10 @@ html, body { height: 100%; margin: 0; font-family: ui-sans-serif, system-ui, -ap
 }
 
 /* ===========================
-   Mobile (max-width: 768px)
+   Mobile (max-width: 768px) + landscape phones
+   Landscape phones have small height (≤430px on any iPhone); tablets/desktops don't.
 =========================== */
-@media (max-width: 768px) {
+@media (max-width: 768px), (orientation: landscape) and (max-height: 500px) {
   .app {
     display: flex;
     flex-direction: row;
