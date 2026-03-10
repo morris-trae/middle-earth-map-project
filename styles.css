@@ -293,9 +293,22 @@ html, body { height: 100%; margin: 0; font-family: ui-sans-serif, system-ui, -ap
     height: 100%;
     flex-shrink: 0;
     background: var(--panel2);
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
     cursor: col-resize;
     user-select: none;
     touch-action: none;
+  }
+
+  .app.panel--open .panel-resizer::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 24px;
+    border-radius: 2px;
+    background: var(--muted);
+    opacity: 0.5;
+    box-shadow: 0 -8px 0 var(--muted), 0 8px 0 var(--muted);
   }
 
   .map-banner {
