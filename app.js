@@ -174,12 +174,14 @@ function loadMapOverlay() {
 
   imageOverlay = L.imageOverlay(img, bounds).addTo(map);
 
-  // Fit and constrain map
-  map.fitBounds(bounds);
+  // Fit and constrain map.
+  // animate:false makes fitBounds synchronous so map.getZoom() reflects the
+  // snapped zoom immediately. Using getZoom() (not getBoundsZoom) ensures minZoom
+  // is set to the same snapped value fitBounds actually landed on — preventing
+  // the current-zoom-below-minZoom conflict that caused auto-zoom-back-in.
+  map.fitBounds(bounds, { animate: false });
   map.setMaxBounds(bounds);
-  // Dynamically set minZoom so the user can always zoom out to see the full image,
-  // but no further. Recalculates on every map/era switch.
-  map.setMinZoom(map.getBoundsZoom(bounds));
+  map.setMinZoom(map.getZoom());
 }
 
 /* ----------------------------
@@ -195,7 +197,8 @@ function initMap() {
     maxZoom: 5,
     zoomSnap: 0.25,
     zoomDelta: 0.5,
-    wheelPxPerZoomLevel: 120
+    wheelPxPerZoomLevel: 120,
+    bounceAtZoomLimits: false
   });
 
   loadMapOverlay();
