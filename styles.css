@@ -238,6 +238,13 @@ html, body { height: 100%; margin: 0; font-family: ui-sans-serif, system-ui, -ap
   .app.panel--open .panel {
     width: 300px;
     border-right: 1px solid var(--border);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .details {
+    flex: none;
+    overflow: visible;
   }
 
   .mapWrap {
