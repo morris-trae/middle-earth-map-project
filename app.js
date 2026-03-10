@@ -22,6 +22,8 @@ const state = {
   selectedLocationId: null
 };
 
+let panelWidth = 300; // last-used panel width; persists within session
+
 /* ----------------------------
    Utilities
 ----------------------------- */
@@ -47,11 +49,78 @@ function closePanelOnMobile() {
   if (window.innerWidth > 768) return;
   const appEl = document.querySelector(".app");
   const toggle = document.getElementById("menuToggle");
+  const panel = document.querySelector(".panel");
   if (appEl) appEl.classList.remove("panel--open");
   if (toggle) {
     toggle.innerHTML = "&#9776;";
     toggle.setAttribute("aria-expanded", "false");
   }
+  if (panel) panel.style.width = "";
+}
+
+function initPanelResizer() {
+  const resizer = document.getElementById("panelResizer");
+  const panel = document.querySelector(".panel");
+  if (!resizer || !panel) return;
+
+  let dragging = false;
+
+  function startDrag() {
+    dragging = true;
+    document.body.style.userSelect = "none";
+    document.body.style.cursor = "col-resize";
+  }
+
+  function onDrag(clientX) {
+    if (!dragging) return;
+    // clientX equals new panel width because panel is flush with left viewport edge (x=0)
+    const min = 160;
+    const max = window.innerWidth - 80;
+    const newWidth = Math.min(Math.max(clientX, min), max);
+    panel.style.width = newWidth + "px";
+    if (map) map.invalidateSize();
+  }
+
+  function stopDrag() {
+    if (!dragging) return;
+    dragging = false;
+    panelWidth = parseInt(panel.style.width, 10) || 300;
+    document.body.style.userSelect = "";
+    document.body.style.cursor = "";
+  }
+
+  // Touch: attach move/end to window only during an active drag so passive:false
+  // doesn't penalise all touch scrolling globally.
+  function onTouchMove(e) {
+    onDrag(e.touches[0].clientX);
+    e.preventDefault();
+  }
+
+  function onTouchEnd() {
+    stopDrag();
+    window.removeEventListener("touchmove", onTouchMove);
+    window.removeEventListener("touchend", onTouchEnd);
+  }
+
+  resizer.addEventListener("touchstart", (e) => {
+    startDrag();
+    window.addEventListener("touchmove", onTouchMove, { passive: false });
+    window.addEventListener("touchend", onTouchEnd);
+    e.preventDefault();
+  }, { passive: false });
+
+  // Mouse events (desktop testing)
+  resizer.addEventListener("mousedown", (e) => {
+    startDrag();
+    e.preventDefault();
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!dragging) return;
+    onDrag(e.clientX);
+  });
+
+  window.addEventListener("mouseup", () => stopDrag());
 }
 
 function getActiveMapMeta() {
@@ -444,6 +513,8 @@ function bindUI() {
       const isOpen = appEl.classList.toggle("panel--open");
       menuToggle.innerHTML = isOpen ? "&#10005;" : "&#9776;";
       menuToggle.setAttribute("aria-expanded", String(isOpen));
+      const panel = document.querySelector(".panel");
+      if (panel) panel.style.width = isOpen ? panelWidth + "px" : "";
     });
   }
 
@@ -454,11 +525,13 @@ function bindUI() {
     if (!window.matchMedia("(orientation: landscape)").matches) return;
     const appEl = document.querySelector(".app");
     const toggle = document.getElementById("menuToggle");
+    const panel = document.querySelector(".panel");
     if (appEl) appEl.classList.remove("panel--open");
     if (toggle) {
       toggle.innerHTML = "&#9776;";
       toggle.setAttribute("aria-expanded", "false");
     }
+    if (panel) panel.style.width = "";
   }
   window.addEventListener("orientationchange", closePanelForLandscape);
   // Fallback for desktop browsers that don't fire orientationchange
@@ -521,6 +594,7 @@ async function main() {
     initMap();
     initJourneys();
     bindUI();
+    initPanelResizer();
     renderMarkers();
     renderJourneys();
 
