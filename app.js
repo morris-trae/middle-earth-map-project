@@ -177,6 +177,9 @@ function loadMapOverlay() {
   // Fit and constrain map
   map.fitBounds(bounds);
   map.setMaxBounds(bounds);
+  // Dynamically set minZoom so the user can always zoom out to see the full image,
+  // but no further. Recalculates on every map/era switch.
+  map.setMinZoom(map.getBoundsZoom(bounds));
 }
 
 /* ----------------------------
