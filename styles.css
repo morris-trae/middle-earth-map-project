@@ -254,7 +254,7 @@ html, body { height: 100%; margin: 0; font-family: ui-sans-serif, system-ui, -ap
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
     z-index: 1000;
