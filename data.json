@@ -1049,6 +1049,186 @@
       "tags": [],
       "summary": "",
       "lore": []
+    },
+    {
+      "id": "mordor_wp_1",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 2167,
+      "lng": 4802,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_2",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 2115,
+      "lng": 4744,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_3",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 2064,
+      "lng": 4731,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_4",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 1997,
+      "lng": 4728,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_5",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 1945,
+      "lng": 4728,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_6",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 1900,
+      "lng": 4724,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_7",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 1857,
+      "lng": 4717,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_8",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 1879,
+      "lng": 4775,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_9",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 1908,
+      "lng": 4833,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_10",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 1948,
+      "lng": 4841,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_11",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 2002,
+      "lng": 4838,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_12",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 2035,
+      "lng": 4845,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_13",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 2037,
+      "lng": 4870,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_14",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 2053,
+      "lng": 4939,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_15",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 2065,
+      "lng": 4971,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_16",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 2035,
+      "lng": 4989,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_17",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 2015,
+      "lng": 5001,
+      "tags": [],
+      "summary": "",
+      "lore": []
+    },
+    {
+      "id": "mordor_wp_18",
+      "name": "Mordor waypoint",
+      "era": "route",
+      "lat": 1985,
+      "lng": 5000,
+      "tags": [],
+      "summary": "",
+      "lore": []
     }
   ],
   "journeys": [
@@ -1076,10 +1256,24 @@
         "argonath",
         "emyn_muil",
         "morannon_the_black_gate",
-        "ithilien",
-        "minas_morgul",
-        "morgai",
-        "isenmouthe",
+        "mordor_wp_1",
+        "mordor_wp_2",
+        "mordor_wp_3",
+        "mordor_wp_4",
+        "mordor_wp_5",
+        "mordor_wp_6",
+        "mordor_wp_7",
+        "mordor_wp_8",
+        "mordor_wp_9",
+        "mordor_wp_10",
+        "mordor_wp_11",
+        "mordor_wp_12",
+        "mordor_wp_13",
+        "mordor_wp_14",
+        "mordor_wp_15",
+        "mordor_wp_16",
+        "mordor_wp_17",
+        "mordor_wp_18",
         "mt_doom_orodruin"
       ]
     },
