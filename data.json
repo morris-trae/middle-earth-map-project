@@ -1229,6 +1229,31 @@
       "tags": [],
       "summary": "",
       "lore": []
+    },
+    {
+      "id": "elvenkings_halls",
+      "name": "Elvenking's Halls",
+      "era": "third",
+      "year": 2941,
+      "tags": [
+        "elves",
+        "mirkwood",
+        "thranduil",
+        "woodland realm"
+      ],
+      "lat": 3456,
+      "lng": 4624,
+      "image": "images/elvenkings_halls.webp",
+      "summary": "The underground palace of Thranduil, King of the Woodland Realm, carved into the rocky hills of northern Mirkwood.",
+      "lore": [
+        "Thranduil's Halls were carved into a great cave in the hills of northern Mirkwood, far more ancient and less fair than Rivendell or Lothlórien.",
+        "The palace was built near the Forest River, with great gates opening onto a stream that flowed through the caverns.",
+        "Thranduil ruled the Woodland Realm from these halls, governing the Silvan Elves of Mirkwood.",
+        "Bilbo Baggins and the thirteen dwarves of Thorin's Company were imprisoned here after being captured in the forest.",
+        "Bilbo used the One Ring to move unseen through the halls and helped the dwarves escape by hiding them in barrels floated down the Forest River.",
+        "During the War of the Ring, Thranduil's realm was assailed by Sauron's forces but held firm.",
+        "Legolas, son of Thranduil, departed from these halls as a member of the Fellowship of the Ring."
+      ]
     }
   ],
   "journeys": [
